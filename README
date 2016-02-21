@@ -15,7 +15,7 @@ Date: 1/20/16				  #
 					  #
 ###########################################
 
-Description: This project queries elasticsearch for all of the 404 pages reached by customers on the day the script is run, and then takes all the unique ones and places them in an excel spreadsheet for easy viewing.
+Description: This project queries elasticsearch for all of the 404 pages reached by people on the day the script is run, and then takes all the unique ones and places them in an excel spreadsheet for easy viewing.
 
 Environments: 404grab is tested with Centos7, and in theory should work on all Redhat Linux environments.
 
@@ -32,8 +32,4 @@ The included setup script will ensure that all of these dependencies are install
 Instructions: Setup is very easy. Just run the included setup script as root. It will make sure that all dependencies are installed.
 
 Once the setup script is run, just set the run_404grab.sh script to be run once a day using crontab, and it will do its thing. You can run the script manually as well if you'd like, but keep in mind that it will automatically email out the excel file without you telling it to. To prevent this, you can just run the python script on its own to generate the excel file and then deal with it manually. This will not interfere with future runnings of the script.
-
-Remember that the run script should be run as storefront, not roon.
-
-If updates are required: The 404grab project is included in bitbucket as elasticsearch_404. It will need to be updated there and then the updates should be pulled to the server.
 
